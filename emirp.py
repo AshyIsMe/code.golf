@@ -1,3 +1,2 @@
 p=lambda x:[x%i!=0 for i in range(2,x)]
-r=lambda x:int(str(x)[::-1])
-[print(i)for i in range(1000)if all([i!=r(i)]+p(i)+p(r(i)))]
+[print(i)for i in range(1000)if all([i!=(r:=int(str(i)[::-1]))]+p(i)+p(r))]
